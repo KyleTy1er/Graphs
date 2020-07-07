@@ -36,12 +36,17 @@ class Graph:
         beginning from starting_vertex.
         """
         q = Queue()
+        # append the starting vertex to the queue []
         q.enqueue(starting_vertex)
+        # create a dict of visited nodes
         visited = set()
+
         while q.size() > 0:
+            # as we iterate through take items out of queue
+            # and store in v....
             v = q.dequeue()
+            # if popped item not in visited add it to visited set
             if v not in visited:
-                print(v)
                 visited.add(v)
                 for next_vertex in self.vertices[v]:
                     q.enqueue(next_vertex)
