@@ -38,11 +38,10 @@ class Graph:
         q = Queue()
         # append the starting vertex to the queue []
         q.enqueue(starting_vertex)
-        # create a dict of visited nodes
+        # create a dict to hold visited nodes
         visited = set()
-
         while q.size() > 0:
-            # as we iterate through take items out of queue
+            # as we iterate through dequeue items ".pop(0)"
             # and store in v....
             v = q.dequeue()
             # if popped item not in visited add it to visited set
