@@ -40,13 +40,15 @@ class Graph:
         q.enqueue(starting_vertex)
         # create a dict of visited nodes
         visited = set()
-
+        # print("this")
         while q.size() > 0:
             # as we iterate through take items out of queue
             # and store in v....
             v = q.dequeue()
+
             # if popped item not in visited add it to visited set
             if v not in visited:
+                print(v)
                 visited.add(v)
                 for next_vertex in self.vertices[v]:
                     q.enqueue(next_vertex)
@@ -176,8 +178,8 @@ if __name__ == '__main__':
     '''
     Should print:
         {1: {2}, 2: {3, 4}, 3: {5}, 4: {6, 7}, 5: {3}, 6: {3}, 7: {1, 6}}
-    '''
-    print(graph.vertices)
+    # '''
+    # print(graph.vertices)
 
     '''
     Valid BFT paths:
@@ -194,7 +196,10 @@ if __name__ == '__main__':
         1, 2, 4, 3, 7, 6, 5
         1, 2, 4, 3, 7, 5, 6
     '''
+
+
     graph.bft(1)
+
 
     '''
     Valid DFT paths:
