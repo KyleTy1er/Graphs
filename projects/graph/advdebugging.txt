@@ -1,0 +1,190 @@
+
+START
+
+room_graph = {0: [(3, 5), {'n': 1}], 1: [(3, 6), {'s': 0, 'n': 2}], 2: [(3, 7), {'s': 1}]}
+
+room_graph[1] = {'n': 1}], 1: [(3, 6), {'s': 0, 'n': 2}], 2: [(3, 7), {'s': 1}
+
+path_list = []
+
+room_list = [0]
+
+visited = set()
+
+len(world.rooms) = 3
+
+len(visited) = 0
+
+current_room = inside loop
+
+neighbors = inside loop
+
+neighbors_queue = inside nested loop
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1
+
+while len(visited) != len(world.rooms):
+
+room_list = [0]
+
+visited = [0]
+
+len(world.rooms) = 3
+
+len(visited) = 1
+
+current_room = 0
+
+neighbors = {'n': 1} <--- this is exit for next room
+
+neighbors_queue = inside nested loop ----
+					 |
+				         |	
+				         |
+						# 1
+						for rooms in neighbors.items()
+						rooms = 1
+						neighbors_queue = [1]
+
+neighbors_queue = [1]
+
+len(neigbor_queue) = 1
+
+if len(neigbor_queue) > 0:
+
+neighbor_queue[0] = 1
+
+next_room = neighbor_queue[0]
+
+room_list.append(next_room)
+
+room_list = [0, 1]
+
+neighbors.items(): n, 1
+
+room = 1
+
+next_room = 1
+
+if room == next_room:
+    path_list.append(direction)
+
+path_list = ['n']
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 2
+
+while len(visited) != len(world.rooms):
+
+room_list = [0, 1]
+
+visited = [0, 1]
+
+len(world.rooms) = 3
+
+len(visited) = 2
+
+current_room = 1
+
+neighbors = {'s': 0, 'n': 2}
+
+neighbors_queue = inside nested loop ----
+					 |
+				         |	
+				         |
+						for rooms in neighbors.items()
+						rooms = [0, 2]
+						0 already in visited so skip to 2:
+						neighbors_queue = [2]
+
+len(neigbor_queue) = 1
+
+if len(neigbor_queue) > 0:
+
+neighbor_queue[0] = 2
+
+next_room = neighbor_queue[0]
+
+next_room = 2
+
+room_list.append(next_room)
+
+room_list = [0, 1, 2]
+
+if room == next_room:
+    path_list.append(direction)
+
+direction = 'n'
+
+path_list = ['n', 'n']
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 3
+
+while len(visited) != len(world.rooms):
+
+room_list = [0, 1, 2]
+
+visited = [0, 1, 2]
+
+len(world.rooms) = 3
+
+len(visited) = 3
+
+current_room = 2
+
+neighbors = {'s': 1}
+
+neighbors_queue = inside nested loop ----
+					 |
+				         |	
+				         |
+						room = 1
+						room is in visited
+
+len(neigbor_queue) = 0
+
+if len(neigbor_queue) > 0: (it isn't)
+
+else: 
+
+room_list.pop()
+
+room_list = [0, 1]
+
+room_list[-1] = 1
+
+next_room = 1
+
+room = 1
+
+path_list = ['n', 'n', 's']
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 4 
+
+EXIT WHILE LOOP
+
+while len(visited) != len(world.rooms):
+
+len(world.rooms) = 3
+
+len(visited) = 3
+
+path_list = ['n', 'n', 's']
+
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
