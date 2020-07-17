@@ -86,14 +86,14 @@ class SocialGraph:
 
             path = queue.dequeue()
 
-            print(f" PATH: {path}")
+            # print(f" PATH: {path}")
             vertex = path[-1]
-            print(f" VERTEX: {vertex}")
+            # print(f" VERTEX: {vertex}")
 
             if vertex not in visited:
-                print("VERTEX NOT IN VISITED")
+                # print("VERTEX NOT IN VISITED")
                 visited[vertex] = path
-                print(f" VIS VERTEX: {visited[vertex]}")
+                # print(f" VIS VERTEX: {visited[vertex]}")
 
 
                 for neighbor in self.friendships[vertex]:
@@ -102,50 +102,67 @@ class SocialGraph:
                     queue.enqueue(new_path)
         return visited
 
-    '''
-        # the key is the user ID
-        # the value is the path
-        # the path is the BFS
-        
-                # 
-                
-                
-        # visited = {}
-        # q = Queue()
-        # q.enqueue([user_id])
-        # while q.size() > 0:
-        #     path = q.dequeue()
-        #     user_key = path[-1]
-        #     if user_key in visited:
-        #         if len(path) < len(visited[user_key]):
-        #             visited[user_key] = path.copy()
-        #     else:
-        #         for friend in self.friendships[user_key]:
-        #             visited[user_key] = path.copy()
-        #             copy = path.copy()
-        #             copy.append(friend)
-        #             q.enqueue(copy)
-        
-        
-        # for k in self.friendships:
-        #     visited[k] = False
-        #
-        # for k in self.friendships:
-        #     if visited[k] == False:
-        #         visited[k] = True
-            # visited[k] = 0
-            # if self.friendships[k] not in visited:
-            #     visited[k] = 1
-            # print (visited)
-        # can I print all the users in user 1's extended network?
-            # print(self.friendships[user_id])
-            # for {1: {8, 4} this prints:
-            # {8, 4}
 
-        # can I find the shortest path between two users?
-            # {1: {8, 4}
-            # {1: [1], 8: [1, 8]
-    '''
+'''     
+3. Questions
+
+To create 100 users with an average of 10 friends each, how many times would you need to call add_friendship()? Why?
+500 because the add_friendships code is the number of users (100) multiplied by the average friends (10) divided by 2 : (500).
+
+If you create 1000 users with an average of 5 random friends each, what percentage of other users will be in a particular user's extended social network? 
+What is the average degree of separation between a user and those in his/her extended network?
+
+5% of users in extended network?
+Avg degree of separation 2?
+
+
+'''
+
+
+'''
+    # the key is the user ID
+    # the value is the path
+    # the path is the BFS
+    
+            # 
+            
+            
+    # visited = {}
+    # q = Queue()
+    # q.enqueue([user_id])
+    # while q.size() > 0:
+    #     path = q.dequeue()
+    #     user_key = path[-1]
+    #     if user_key in visited:
+    #         if len(path) < len(visited[user_key]):
+    #             visited[user_key] = path.copy()
+    #     else:
+    #         for friend in self.friendships[user_key]:
+    #             visited[user_key] = path.copy()
+    #             copy = path.copy()
+    #             copy.append(friend)
+    #             q.enqueue(copy)
+    
+    
+    # for k in self.friendships:
+    #     visited[k] = False
+    #
+    # for k in self.friendships:
+    #     if visited[k] == False:
+    #         visited[k] = True
+        # visited[k] = 0
+        # if self.friendships[k] not in visited:
+        #     visited[k] = 1
+        # print (visited)
+    # can I print all the users in user 1's extended network?
+        # print(self.friendships[user_id])
+        # for {1: {8, 4} this prints:
+        # {8, 4}
+
+    # can I find the shortest path between two users?
+        # {1: {8, 4}
+        # {1: [1], 8: [1, 8]
+'''
 
 
 
@@ -186,7 +203,7 @@ We could set the value to True or 1?
 
 if __name__ == '__main__':
     sg = SocialGraph()
-    sg.populate_graph(10, 2)
+    sg.populate_graph(1000, 5)
     print(sg.friendships)
     # print(sg.get_all_social_paths(1))
     connections = sg.get_all_social_paths(1)
